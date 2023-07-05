@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ItemSearchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('items-lists', 'ItemSearchController@index')->name('items-lists');
-Route::post('create-item', 'ItemSearchController@create')->name('create-item');
+Route::get('items-lists', [ItemSearchController::class, 'index'])->name('items-lists');
+Route::post('create-item', [ItemSearchController::class, 'create'])->name('create-item');

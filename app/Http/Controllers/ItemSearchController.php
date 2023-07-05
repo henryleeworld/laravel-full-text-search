@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Item;
+use App\Models\Item;
 
 class ItemSearchController extends Controller
 {
