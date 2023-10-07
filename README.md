@@ -1,4 +1,4 @@
-# Laravel 9 全文檢索
+# Laravel 10 全文檢索
 
 全文檢索搜尋可讓使用者針對資料表中以字元為主的資料，執行全文檢索查詢。
 
@@ -25,13 +25,13 @@ $ php artisan migrate
 $ php artisan scout:import
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
-- 你可以經由 `/items-lists` 來進行全域性範圍語法輸出。
+- 你可以經由 `/items-lists` 來進行項目查詢。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/RAvwaK2.png)
+![](https://i.imgur.com/UtMPvlZ.png)
 > 顯示全部項目
 
-![](https://i.imgur.com/p8FUdaq.png)
+![](https://i.imgur.com/ieKMoPr.png)
 > 對項目標題進行查詢

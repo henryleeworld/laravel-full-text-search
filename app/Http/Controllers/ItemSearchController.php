@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Models\Item;
+use Illuminate\Http\Request;
 
 class ItemSearchController extends Controller
 {
@@ -16,9 +16,9 @@ class ItemSearchController extends Controller
     public function index(Request $request)
     {
         if ($request->has('titlesearch')) {
-            $items = Item::search($request->titlesearch)->paginate(6);
+            $items = Item::search($request->titlesearch)->paginate(10);
         } else {
-            $items = Item::paginate(6);
+            $items = Item::paginate(10);
         }
         return view('item-search',compact('items'));
     }
