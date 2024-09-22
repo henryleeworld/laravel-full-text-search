@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>全文檢索</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>{{ __('Full-Text Search') }}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
         <div class="container-lg">
-            <h2>全文檢索</h2>
+            <h2>{{ __('Full-text search') }}</h2>
             <br />
             <form method="POST" action="{{ route('create-item') }}" autocomplete="off">
                 @if(count($errors))
                 <div class="alert alert-danger">
-                    <strong>哎喲！</strong>您的輸入存在一些問題。
+                    <strong>{{ __('Whoops!') }}</strong>{{ __('Something went wrong with your input.') }}
                     <br />
                     <ul>
                         @foreach($errors->all() as $error)
@@ -24,40 +24,40 @@
                 <div class="row">
                     <div class="col">
                         <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
-                            <input type="text" id="title" name="title" class="form-control" placeholder="輸入標題" value="{{ old('title') }}" />
+                            <input type="text" id="title" name="title" class="form-control" placeholder="{{ __('Enter title') }}" value="{{ old('title') }}" />
                             <span class="text-danger">{{ $errors->first('title') }}</span>
                         </div>
                     </div>
                     <div class="col">
                         <div>
-                            <button class="btn btn-success">建立新項目</button>
+                            <button class="btn btn-success">{{ __('Create new item') }}</button>
                         </div>
                     </div>
                 </div>
             </form>
             <div class="panel panel-primary">
-                <div class="panel-heading mt-3">項目管理</div>
+                <div class="panel-heading mt-3">{{ __('Item management') }}</div>
                 <div class="panel-body">
                     <form method="GET" action="{{ route('items-lists') }}">
                         <div class="row">
                             <div class="col">
                                 <div>
-                                    <input type="text" name="titlesearch" class="form-control" placeholder="輸入標題進行搜尋" value="{{ old('titlesearch') }}" />
+                                    <input type="text" name="titlesearch" class="form-control" placeholder="{{ __('Enter a title to search') }}" value="{{ old('titlesearch') }}" />
                                 </div>
                             </div>
                             <div class="col">
                                 <div>
-                                    <button class="btn btn-success">搜尋</button>
+                                    <button class="btn btn-success">{{ __('Search') }}</button>
                                 </div>
                             </div>
                         </div>
                     </form>
                     <table class="table table-bordered mt-3">
                         <thead>
-                            <th>編號</th>
-                            <th>標題</th>
-                            <th>建立時間</th>
-                            <th>更新時間</th>
+                            <th>{{ __('ID') }}</th>
+                            <th>{{ __('Title') }}</th>
+                            <th>{{ __('Created At') }}</th>
+                            <th>{{ __('Updated At') }}</th>
                         </thead>
                         <tbody>
                             @if($items->count()) @foreach($items as $key => $item)
@@ -69,7 +69,7 @@
                             </tr>
                             @endforeach @else
                             <tr>
-                                <td colspan="4">沒有資料。</td>
+                                <td colspan="4">{{ __('No Data.') }}</td>
                             </tr>
                             @endif
                         </tbody>

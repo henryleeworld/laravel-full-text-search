@@ -1,4 +1,4 @@
-# Laravel 10 全文檢索
+# Laravel 11 全文檢索
 
 全文檢索搜尋可讓使用者針對資料表中以字元為主的資料，執行全文檢索查詢。
 
@@ -22,7 +22,7 @@ $ php artisan migrate
 ```
 - 執行 __Artisan__ 指令的 __scout__ 來把所有現有記錄匯入到搜尋索引裡。
 ```sh
-$ php artisan scout:import
+$ php artisan scout:import "App\Models\{模型名稱}"
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/items-lists` 來進行項目查詢。
@@ -30,8 +30,8 @@ $ php artisan scout:import
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/UtMPvlZ.png)
+![](https://i.imgur.com/HLYG9sl.png)
 > 顯示全部項目
 
-![](https://i.imgur.com/ieKMoPr.png)
+![](https://i.imgur.com/wAyMRWA.png)
 > 對項目標題進行查詢

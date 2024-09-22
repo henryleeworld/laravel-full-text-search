@@ -9,6 +9,11 @@ class Item extends Model
 {
     use Searchable;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
     public $fillable = ['title'];
 
     /**
