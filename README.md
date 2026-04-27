@@ -1,4 +1,4 @@
-# Laravel 11 全文檢索
+# Laravel 12 全文檢索
 
 全文檢索搜尋可讓使用者針對資料表中以字元為主的資料，執行全文檢索查詢。
 
@@ -30,8 +30,8 @@ $ php artisan scout:import "App\Models\{模型名稱}"
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/HLYG9sl.png)
+![](https://i.imgur.com/jnHeYIc.png)
 > 顯示全部項目
 
-![](https://i.imgur.com/wAyMRWA.png)
+![](https://i.imgur.com/LpJN8W2.png)
 > 對項目標題進行查詢
